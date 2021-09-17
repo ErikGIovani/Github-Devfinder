@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <title>GitHub Devfinder</title>
+  </head>
+  <body>
+    <main>
+      
+  <section class="contenido">
+    <div class="header">
+      <h1>devfinder</h1>
+      <p id="darkmode">DARK <i class="fas fa-moon"></i></p>
+    </div>
+
+    <form>
+      <i class="fas fa-search"></i>
+      <input id="nombre" class="formulario" type="text" placeholder="Search Github username...">
+      <p id="link"></p>
+      <button class="formulario-boton" type="submit">Search</button>
+    </form>
+
+
+    <div id="vista" class="[ container-github ]">
+      <img id="image-avatar" class="[ github ] [ avatar--github ]" src="">
+      <div class="[ github ] [ sub-container1--github ]">
+        <h2 id="name" class="[ github ] [ container1-github ] [ name ]"></h2>
+        <p id="user-name" class="[ github ] [ container1-github ] [ username ]"></p>
+        <p id="bio" class="[ github ] [ container1-github ] [ state ]"></p>
+      </div>
+      <p id="day-creation" class="[ github ] [ day ]"></p>
+      <div class="[ github ] [ sub-container2--github ]">
+        <div>
+          <p class="headers">Repos</p>
+          <p id="repos" class="dinamic-text"></p>
+        </div>
+        <div>
+          <p class="headers">Followers</p>
+          <p id="followers" class="dinamic-text"></p>
+        </div>
+        <div>
+          <p class="headers">Following</p>
+          <p id="following" class="dinamic-text"></p>
+        </div>
+      </div>
+      <div class="[ github ] [ sub-container3--github ]">
+        <p id="location"></p>
+        <p id="twitter"></p>
+        <p id="blog"></p>
+        <p id="company"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

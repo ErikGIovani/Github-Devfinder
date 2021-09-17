@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f8ff;
+  transition: 0.5s;
+}
+.dark {
+  background-color: #141c2f;
+}
+.header {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto 1.875rem auto;
+  justify-content: space-between;
+}
+.header h1 {
+  font-size: 2.5em;
+}
+.dark .header h1 {
+  color: white;
+}
+.header p {
+  font-size: 1.25em;
+  cursor: pointer;
+}
+.dark .header p {
+  color: white;
+}
+.contenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16vh 0vw 20vh 0;
+}
+.contenido form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  padding: 0.375rem 0.375rem 0.375rem 1.25rem;
+  background-color: white;
+  box-shadow: rgba(142, 101, 101, 0.35) 0px 5px 15px;
+}
+.dark .contenido form {
+  background-color: #1e2a47;
+  box-shadow: rgba(2, 2, 2, 0.38) 0px 5px 15px;
+}
+.contenido form p {
+  width: 20%;
+  color: red;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-right: 0.625rem;
+}
+.contenido form .fa-search {
+  font-size: 1.5625em;
+  color: #8c8c8c;
+  padding-right: 0.625rem;
+}
+.contenido form .formulario {
+  border: none;
+  outline: none;
+  font-size: 1.5625em;
+  width: 100%;
+  background-color: transparent;
+}
+.dark .contenido form .formulario {
+  color: white;
+}
+.contenido form .formulario::placeholder {
+  color: #8c8c8c;
+  opacity: 1;
+}
+.formulario-boton {
+  color: white;
+  background-color: #5d61ef;
+  padding: 1rem 1.5625rem;
+  border-radius: 10px;
+  border: none;
+}
+.container-github {
+  background-color: white;
+  width: 50%;
+  padding: 3.125rem 2.5rem;
+  margin-top: 1.875rem;
+  border-radius: 10px;
+  box-shadow: rgba(142, 101, 101, 0.35) 0px 5px 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    'avatar 		     header1         header1          days'
+    'clean	         numbers         numbers          numbers'
+    'clean		       social          social           social';
+}
+.dark .container-github {
+  background-color: #1e2a47;
+  color: white;
+  box-shadow: rgba(2, 2, 2, 0.38) 0px 5px 15px;
+}
+.avatar--github {
+  width: 9.375rem;
+  padding-right: 1.25rem;
+  border-radius: 50%;
+  grid-area: avatar;
+}
+.dark .avatar--github {
+  filter: contrast(80%);
+}
+.sub-container1--github {
+  grid-area: header1;
+  display: flex;
+  flex-direction: column;
+}
+.sub-container1--github .name {
+  font-size: 2em;
+}
+.sub-container1--github .username {
+  font-size: 1.125em;
+}
+.sub-container1--github .state {
+  font-size: 1.25em;
+  padding-top: 0.625rem;
+}
+.day {
+  grid-area: days;
+  text-align: right;
+  font-size: 1.125em;
+  padding-top: 0.5625rem;
+}
+.sub-container2--github {
+  width: 100%;
+  grid-area: numbers;
+  display: flex;
+  margin-top: 0.5625rem;
+  background-color: #f5f8ff;
+  padding: 0.625rem 1.25rem 1.25rem 1.25rem;
+  border-radius: 10px;
+}
+.dark .sub-container2--github {
+  background-color: #141c2f;
+}
+.sub-container2--github * + * {
+  margin-left: 5rem;
+}
+.sub-container2--github div {
+  display: flex;
+  flex-direction: column;
+}
+.sub-container2--github div .headers {
+  font-size: 1.25em;
+}
+.sub-container2--github div .dinamic-text {
+  margin-left: 0;
+  font-weight: bolder;
+  font-size: 1.5625em;
+}
+.sub-container3--github {
+  grid-area: social;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.625rem;
+}
+.sub-container3--github p {
+  width: 50%;
+  padding-top: 1.25rem;
+}
+.not-available {
+  opacity: 0.5;
+}
+.hidde {
+  display: none;
+}
+
+
+
+@media (max-width: 1200px) {
+	body {
+		font-size: 14px;
+	}
+  .avatar--github {
+    width: 6rem;
+  }
+  .sub-container2--github * + * {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+	body {
+		font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+		font-size: 12px;
+  }
+  .header {
+    width: 90%;
+  }
+  .contenido form {
+    width: 90%;
+  }
+  .container-github {
+    width: 90%;
+    grid-template-areas:
+      'avatar 		       header1         header1          header1'
+      'numbers 	         numbers         numbers          numbers'
+      'social 		       social          social           social';
+  }
+  .day {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+	body {
+		font-size: 9px;
+	}
+}
